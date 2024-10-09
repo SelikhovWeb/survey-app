@@ -19,6 +19,21 @@ const surveySlice = createSlice({
       state.currentSurveyId = action.payload;
     },
     addCompletedAnswer(state, action: PayloadAction<CompletedAnswer>) {
+      if (!state.currentSurveyId) {
+        return;
+      }
+
+      // Check if answer already written in current survey completed answers
+      if (
+        state.completedAnswers.some(
+          (answer) => answer.questionId === action.payload.questionId
+        )
+      ) {
+        state.completedAnswers = state.completedAnswers.filter(
+          (answer) => answer.questionId !== action.payload.questionId
+        );
+      }
+
       state.completedAnswers.push(action.payload);
     },
     resetSurvey(state) {

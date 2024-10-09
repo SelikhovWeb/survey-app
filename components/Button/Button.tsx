@@ -5,11 +5,15 @@ import styles from "./Button.module.css";
 interface ButtonProps {
   text: string;
   onClick?: () => void;
+  isActive?: boolean;
 }
 
-const Button = ({ text, onClick }: ButtonProps) => {
+const Button = ({ text, onClick, isActive }: ButtonProps) => {
   return (
-    <button className={styles.button} onClick={() => onClick?.()}>
+    <button
+      className={`${styles.button} ${isActive ? styles.active : ""}`}
+      onClick={() => onClick?.()}
+    >
       {text}
     </button>
   );

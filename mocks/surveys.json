@@ -1,138 +1,150 @@
 {
   "data": [
     {
-      "surveyId": "1",
+      "surveyId": "b9d459c8-9984-4a37-82ca-d26f8451dc4b",
       "surveyTitle": "Color Survey",
       "questions": [
         {
-          "questionId": "1",
+          "questionId": "4c44ea7f-9c44-44df-ad3d-fb3f2ee6d65f",
           "text": "What is your favorite color?",
           "answers": [
             {
               "text": "Red",
-              "nextQuestionId": "2",
-              "answerId": "1"
+              "nextQuestionId": "3c94ebe4-bac4-402e-bcf7-08ddfc999811",
+              "answerId": "b22c858b-6633-4cae-bc53-c714d5dd0111"
             },
             {
               "text": "Blue",
-              "nextQuestionId": "3",
-              "answerId": "2"
+              "nextQuestionId": "a6539738-34e8-4e7e-9366-2cc03a81d852",
+              "answerId": "5c6171b7-de68-41b1-8f97-287d98bef41f"
             },
             {
               "text": "Green",
-              "nextQuestionId": "4",
-              "answerId": "3"
+              "nextQuestionId": "543dc09a-9e26-456e-8a40-bd6c585c80d8",
+              "answerId": "6ae8f05f-d2ca-4b91-83df-fa12d1023be5"
             }
           ]
         },
         {
-          "questionId": "2",
+          "questionId": "3c94ebe4-bac4-402e-bcf7-08ddfc999811",
           "text": "Why did you choose red?",
           "answers": [
             {
               "text": "Because it's passionate",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "a39432b1-3d46-4bd4-b763-f5228d2bed5e"
             },
             {
               "text": "I just like it",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "56afd253-6632-40e4-9b98-36263321c5e1"
             }
           ]
         },
         {
-          "questionId": "3",
+          "questionId": "a6539738-34e8-4e7e-9366-2cc03a81d852",
           "text": "Why did you choose blue?",
           "answers": [
             {
               "text": "I love calm colors",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "5c3b7ee4-dce7-4827-95cf-1c35ef88ee3d"
             },
             {
               "text": "It reminds me of the sea",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "80390488-5b3d-4449-97f0-2a5cfb42ca5e"
             }
           ]
         },
         {
-          "questionId": "4",
+          "questionId": "543dc09a-9e26-456e-8a40-bd6c585c80d8",
           "text": "Why did you choose green?",
           "answers": [
             {
               "text": "Because it's natural",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "37e1cd86-90c5-4172-9546-cbce9f9e5e4c"
             },
             {
               "text": "It reminds me of nature",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "dd0ecf09-c097-4d39-97d6-8e1aed07337b"
             }
           ]
         }
       ]
     },
     {
-      "surveyId": "2",
+      "surveyId": "1bedf53b-029a-448c-9660-4d78a948ef6a",
       "surveyTitle": "Favorite Animal Survey",
       "questions": [
         {
-          "questionId": "1",
+          "questionId": "3c326dcd-eb83-4ed8-a112-6f191c5b54f7",
           "text": "What is your favorite animal?",
           "answers": [
             {
               "text": "Dog",
-              "nextQuestionId": "2",
-              "answerId": "1"
+              "nextQuestionId": "3e3189eb-2072-46b5-996a-7472f95cf2d1",
+              "answerId": "65e8c880-aa8a-445a-830d-afb112cc2ba8"
             },
             {
               "text": "Cat",
-              "nextQuestionId": "3",
-              "answerId": "2"
+              "nextQuestionId": "cffad204-b5b6-42ca-bbda-7e7876df655a",
+              "answerId": "e67e4072-6ab2-441d-807d-df90ec90782e"
             },
             {
               "text": "Bird",
-              "nextQuestionId": "4",
-              "answerId": "3"
+              "nextQuestionId": "ecce9116-6cd1-4ac4-aa16-3bbeb9b8f680",
+              "answerId": "136b881e-d9a3-431f-9bf0-892de32ae559"
             }
           ]
         },
         {
-          "questionId": "2",
+          "questionId": "3e3189eb-2072-46b5-996a-7472f95cf2d1",
           "text": "Why do you like dogs?",
           "answers": [
             {
               "text": "They're loyal companions",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "cb46ad18-2895-4ed0-9351-b4d59ceeb33d"
             },
             {
               "text": "They're playful and fun",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "d05756b1-09cb-41da-a62a-827d5032a8ea"
             }
           ]
         },
         {
-          "questionId": "3",
+          "questionId": "cffad204-b5b6-42ca-bbda-7e7876df655a",
           "text": "Why do you like cats?",
           "answers": [
             {
               "text": "They're independent",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "ff1e7eb0-262d-4b76-8b62-ee6aaf0f45fb"
             },
             {
               "text": "They are playful and cuddly",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "acc9e8e9-604c-41f5-9c29-990c51badea9"
             }
           ]
         },
         {
-          "questionId": "4",
+          "questionId": "ecce9116-6cd1-4ac4-aa16-3bbeb9b8f680",
           "text": "Why do you like birds?",
           "answers": [
             {
               "text": "They can fly freely",
-              "answerId": "1"
+              "nextQuestionId": null,
+              "answerId": "e2e3928c-81fc-486a-b33b-acb8142ccd91"
             },
             {
               "text": "Their songs are beautiful",
-              "answerId": "2"
+              "nextQuestionId": null,
+              "answerId": "ce27038f-a707-46f0-a7b8-4fde81e8ba0d"
             }
           ]
         }

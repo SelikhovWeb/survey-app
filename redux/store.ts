@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import surveyReducer from "./surveySlice";
+import surveyReducer from "./slices/surveySlice";
+import layoutReducer from "./slices/layoutSlice";
 
 const store = configureStore({
   reducer: {
     survey: surveyReducer,
+    layout: layoutReducer,
   },
 });
 

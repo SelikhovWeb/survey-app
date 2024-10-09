@@ -3,17 +3,21 @@ import styles from "./Results.module.css";
 import { RootState } from "@/redux/store";
 import { CompletedAnswer } from "@/types";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../Button/Button";
-import { resetSurvey } from "@/redux/surveySlice";
+import { resetSurvey, setCurrentSurveyId } from "@/redux/slices/surveySlice";
 
 const Results = () => {
+  const dispatch = useDispatch();
+
   const completedAnswers = useSelector(
     (state: RootState) => state.survey.completedAnswers
   );
 
-  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setCurrentSurveyId(null));
+  }, [dispatch]);
 
   const handleBackToHomeClick = () => {
     dispatch(resetSurvey());

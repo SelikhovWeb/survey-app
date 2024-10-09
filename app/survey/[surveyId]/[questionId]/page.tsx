@@ -1,7 +1,5 @@
-import surveys from "@/mocks/surveys.json"; // Данные для опросов
-import { Answer } from "@/types";
-import styles from "./page.module.css";
-import AnswerOption from "@/components/AnswerOption/AnswerOption";
+import surveys from "@/mocks/surveys.json";
+import AnswersList from "./components/AnswersList";
 
 interface QuestionPageProps {
   params: {
@@ -19,19 +17,18 @@ export default function QuestionPage({ params }: QuestionPageProps) {
   const question = survey.questions.find((q) => q.questionId === questionId);
   if (!question) return <div>Question not found</div>;
 
+  const questionIndex = survey.questions.findIndex(
+    (q) => q.questionId === questionId
+  );
+
   return (
     <div>
       <h1>{question.text}</h1>
-
-      {question.answers.map((answer: Answer) => (
-        <div className={styles.answerWrapper} key={answer.answerId}>
-          <AnswerOption
-            surveyId={surveyId}
-            answer={answer}
-            question={question}
-          />
-        </div>
-      ))}
+      <AnswersList
+        surveyId={surveyId}
+        question={question}
+        questionIndex={questionIndex}
+      />
     </div>
   );
 }

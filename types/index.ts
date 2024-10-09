@@ -1,7 +1,7 @@
 export interface Answer {
   answerId: string;
   text: string;
-  nextQuestionId?: string;
+  nextQuestionId?: string | null;
 }
 
 export interface Question {
@@ -19,5 +19,6 @@ export interface Survey {
 export interface CompletedAnswer {
   questionId: string;
   question: string;
+  answerId: string;
   answer: string;
 }
