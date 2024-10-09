@@ -1,13 +1,6 @@
 :root {
-  --background: #ffffff;
+  --background: #fff0f0;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html,
@@ -39,4 +32,29 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.main {
+  margin-top: 64px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff0f0;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+
+h1 {
+  width: 330px;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
 }

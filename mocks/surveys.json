@@ -1,0 +1,142 @@
+{
+  "data": [
+    {
+      "surveyId": "1",
+      "surveyTitle": "Color Survey",
+      "questions": [
+        {
+          "questionId": "1",
+          "text": "What is your favorite color?",
+          "answers": [
+            {
+              "text": "Red",
+              "nextQuestionId": "2",
+              "answerId": "1"
+            },
+            {
+              "text": "Blue",
+              "nextQuestionId": "3",
+              "answerId": "2"
+            },
+            {
+              "text": "Green",
+              "nextQuestionId": "4",
+              "answerId": "3"
+            }
+          ]
+        },
+        {
+          "questionId": "2",
+          "text": "Why did you choose red?",
+          "answers": [
+            {
+              "text": "Because it's passionate",
+              "answerId": "1"
+            },
+            {
+              "text": "I just like it",
+              "answerId": "2"
+            }
+          ]
+        },
+        {
+          "questionId": "3",
+          "text": "Why did you choose blue?",
+          "answers": [
+            {
+              "text": "I love calm colors",
+              "answerId": "1"
+            },
+            {
+              "text": "It reminds me of the sea",
+              "answerId": "2"
+            }
+          ]
+        },
+        {
+          "questionId": "4",
+          "text": "Why did you choose green?",
+          "answers": [
+            {
+              "text": "Because it's natural",
+              "answerId": "1"
+            },
+            {
+              "text": "It reminds me of nature",
+              "answerId": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surveyId": "2",
+      "surveyTitle": "Favorite Animal Survey",
+      "questions": [
+        {
+          "questionId": "1",
+          "text": "What is your favorite animal?",
+          "answers": [
+            {
+              "text": "Dog",
+              "nextQuestionId": "2",
+              "answerId": "1"
+            },
+            {
+              "text": "Cat",
+              "nextQuestionId": "3",
+              "answerId": "2"
+            },
+            {
+              "text": "Bird",
+              "nextQuestionId": "4",
+              "answerId": "3"
+            }
+          ]
+        },
+        {
+          "questionId": "2",
+          "text": "Why do you like dogs?",
+          "answers": [
+            {
+              "text": "They're loyal companions",
+              "answerId": "1"
+            },
+            {
+              "text": "They're playful and fun",
+              "answerId": "2"
+            }
+          ]
+        },
+        {
+          "questionId": "3",
+          "text": "Why do you like cats?",
+          "answers": [
+            {
+              "text": "They're independent",
+              "answerId": "1"
+            },
+            {
+              "text": "They are playful and cuddly",
+              "answerId": "2"
+            }
+          ]
+        },
+        {
+          "questionId": "4",
+          "text": "Why do you like birds?",
+          "answers": [
+            {
+              "text": "They can fly freely",
+              "answerId": "1"
+            },
+            {
+              "text": "Their songs are beautiful",
+              "answerId": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
