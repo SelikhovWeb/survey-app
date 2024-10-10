@@ -6,6 +6,7 @@
       "questions": [
         {
           "questionId": "64200eba-281e-4faf-b9a0-b5bfa430f61a",
+          "type": "radio",
           "text": "Select your gender:",
           "answers": [
             {
@@ -22,6 +23,7 @@
         },
         {
           "questionId": "8903d5a9-7cf4-48ce-a88b-b094bcf9ef63",
+          "type": "radio",
           "text": "So we can get to know you better, tell us about your relationship status.",
           "answers": [
             {
@@ -38,6 +40,7 @@
         },
         {
           "questionId": "f0f4a4d5-0d8e-4938-92a8-4ae121ecc1f0",
+          "type": "radio",
           "text": "Are you a single parent?",
           "answers": [
             {
@@ -54,6 +57,7 @@
         },
         {
           "questionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+          "type": "radio",
           "text": "Single {{gender}} {{has_kids}} need a slightly different approach to improve their relationship. Which statement best describes you?",
           "parseOptions": {
             "gender": {
@@ -96,6 +100,7 @@
         },
         {
           "questionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+          "type": "radio",
           "text": "Do you tend to overthink?",
           "infoScreen": {
             "infoScreenId": "782ca52c-7dc1-44de-9cbc-12f4f96c1b9e",
@@ -120,6 +125,7 @@
         },
         {
           "questionId": "c22fe3f6-5606-44f9-a887-0230b6cd26c0",
+          "type": "radio",
           "text": "What is most important to you?",
           "answers": [
             {
@@ -146,6 +152,7 @@
         },
         {
           "questionId": "99fabaf4-11c3-4eda-b84b-6380e0b6d984",
+          "type": "radio",
           "text": "Is emotional control tricky for you?",
           "answers": [
             {
@@ -172,6 +179,7 @@
         },
         {
           "questionId": "28a017dd-ebfa-40dd-b1ce-21a21086a5f9",
+          "type": "radio",
           "text": "Are you a parent?",
           "answers": [
             {
@@ -188,6 +196,7 @@
         },
         {
           "questionId": "161821d7-5b23-4c01-9479-82fb4980fc14",
+          "type": "radio",
           "text": "{{gender}} {{has_kids}} need a slightly different approach to improve their relationship. Which statement best describes you?",
           "parseOptions": {
             "gender": {
@@ -225,6 +234,7 @@
         },
         {
           "questionId": "a3a361b1-d3f5-46f3-8b6a-7dd9b9085786",
+          "type": "radio",
           "text": "Is your partner an introvert or extrovert?",
           "answers": [
             {
@@ -246,6 +256,7 @@
         },
         {
           "questionId": "c6086465-9f97-41f0-b9a0-39dc186707ba",
+          "type": "radio",
           "text": "What is your partner’s gender?",
           "answers": [
             {
@@ -262,6 +273,7 @@
         },
         {
           "questionId": "f38bb460-bb70-4d95-bd06-181116b34661",
+          "type": "radio",
           "text": "Do you agree with the statement below?",
           "subtext": "“My partner and I make sex a priority in our relationship”",
           "answers": [
@@ -294,6 +306,7 @@
         },
         {
           "questionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+          "type": "radio",
           "text": "When you think about your relationship goals, you feel...?",
           "answers": [
             {
@@ -315,6 +328,7 @@
         },
         {
           "questionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+          "type": "radio",
           "text": "Where did you hear about us?",
           "answers": [
             {
@@ -408,6 +422,7 @@
       "questions": [
         {
           "questionId": "4c44ea7f-9c44-44df-ad3d-fb3f2ee6d65f",
+          "type": "radio",
           "text": "What is your favorite color?",
           "answers": [
             {
@@ -429,22 +444,13 @@
         },
         {
           "questionId": "3c94ebe4-bac4-402e-bcf7-08ddfc999811",
+          "type": "text",
           "text": "Why did you choose red?",
-          "answers": [
-            {
-              "text": "Because it's passionate",
-              "nextQuestionId": null,
-              "answerId": "a39432b1-3d46-4bd4-b763-f5228d2bed5e"
-            },
-            {
-              "text": "I just like it",
-              "nextQuestionId": null,
-              "answerId": "56afd253-6632-40e4-9b98-36263321c5e1"
-            }
-          ]
+          "nextQuestionId": null
         },
         {
           "questionId": "a6539738-34e8-4e7e-9366-2cc03a81d852",
+          "type": "radio",
           "text": "Why did you choose blue?",
           "answers": [
             {
@@ -461,6 +467,7 @@
         },
         {
           "questionId": "543dc09a-9e26-456e-8a40-bd6c585c80d8",
+          "type": "radio",
           "text": "Why did you choose green?",
           "answers": [
             {
@@ -483,6 +490,7 @@
       "questions": [
         {
           "questionId": "3c326dcd-eb83-4ed8-a112-6f191c5b54f7",
+          "type": "radio",
           "text": "What is your favorite animal?",
           "answers": [
             {
@@ -504,6 +512,7 @@
         },
         {
           "questionId": "3e3189eb-2072-46b5-996a-7472f95cf2d1",
+          "type": "radio",
           "text": "Why do you like dogs?",
           "answers": [
             {
@@ -520,6 +529,7 @@
         },
         {
           "questionId": "cffad204-b5b6-42ca-bbda-7e7876df655a",
+          "type": "radio",
           "text": "Why do you like cats?",
           "answers": [
             {
@@ -536,6 +546,7 @@
         },
         {
           "questionId": "ecce9116-6cd1-4ac4-aa16-3bbeb9b8f680",
+          "type": "radio",
           "text": "Why do you like birds?",
           "answers": [
             {

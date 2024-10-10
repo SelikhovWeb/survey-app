@@ -1,7 +1,9 @@
-import surveys from "@/mocks/surveys.json";
+import surveysData from "@/mocks/surveys.json";
 import AnswersList from "./components/AnswersList";
 import InfoScreenContent from "@/components/InfoScreenContent/InfoScreenContent";
 import ParsedQuestionText from "./components/ParsedQuestionText";
+import { SurveysData } from "@/types";
+import TextAnswer from "./components/TextAnswer/TextAnswer";
 
 export interface QuestionPageProps {
   params: {
@@ -19,6 +21,8 @@ export default function QuestionPage({
 }: QuestionPageProps) {
   const { surveyId, questionId } = params;
 
+  const surveys: SurveysData = surveysData as SurveysData;
+
   const survey = surveys.data.find((s) => s.surveyId === surveyId);
   if (!survey) return <div>Survey not found</div>;
 
@@ -32,6 +36,8 @@ export default function QuestionPage({
   const shouldShowInfoScreen =
     !!searchParams?.infoScreenId && question?.infoScreen;
 
+  const shouldParseQuestionText = question?.parseOptions;
+
   if (shouldShowInfoScreen) {
     return (
       <InfoScreenContent
@@ -44,7 +50,7 @@ export default function QuestionPage({
 
   return (
     <div>
-      {question?.parseOptions ? (
+      {shouldParseQuestionText ? (
         <ParsedQuestionText
           text={question.text}
           parseOptions={question.parseOptions}
@@ -52,11 +58,18 @@ export default function QuestionPage({
       ) : (
         <h1>{question.text}</h1>
       )}
-      <AnswersList
-        surveyId={surveyId}
-        question={question}
-        questionIndex={questionIndex}
-      />
+
+      {question.type === "radio" && (
+        <AnswersList
+          surveyId={surveyId}
+          question={question}
+          questionIndex={questionIndex}
+        />
+      )}
+
+      {question.type === "text" && (
+        <TextAnswer question={question} surveyId={surveyId} />
+      )}
     </div>
   );
 }

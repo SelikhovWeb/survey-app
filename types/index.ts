@@ -1,16 +1,29 @@
+type QuestionType = "radio" | "text" | "range" | "date";
+
 export interface Answer {
   answerId: string;
   text: string;
   nextQuestionId?: string | null;
 }
 
-export interface Question {
+export interface BaseQuestion {
   questionId: string;
   text: string;
-  answers: Answer[];
   infoScreen?: InfoScreen;
   parseOptions?: ParseOptions;
 }
+
+export interface QuestionWithAnswers extends BaseQuestion {
+  answers: Answer[];
+  type: Extract<QuestionType, "radio">;
+}
+
+export interface SingleValueQuestion extends BaseQuestion {
+  nextQuestionId: string | null;
+  type: Extract<QuestionType, "text" | "range" | "date">;
+}
+
+export type Question = QuestionWithAnswers | SingleValueQuestion;
 
 export interface Survey {
   surveyId: string;
@@ -37,4 +50,8 @@ export interface ParseOptions {
     questionId: string;
     answers: { [key: string]: string | undefined };
   };
+}
+
+export interface SurveysData {
+  data: Survey[];
 }

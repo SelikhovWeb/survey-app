@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import { setDarkThemeEnabled } from "@/redux/slices/layoutSlice";
 
 interface InfoScreenProps {
-  infoScreenData: InfoScreen;
+  infoScreenData?: InfoScreen;
   params: QuestionPageProps["params"];
   searchParams: QuestionPageProps["searchParams"];
 }
@@ -21,7 +21,6 @@ const InfoScreenContent = ({
 }: InfoScreenProps) => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const { text, subtext, buttonText } = infoScreenData;
 
   useEffect(() => {
     dispatch(setDarkThemeEnabled(true));
@@ -30,6 +29,12 @@ const InfoScreenContent = ({
       dispatch(setDarkThemeEnabled(false));
     };
   }, [dispatch]);
+
+  if (!infoScreenData) {
+    return null;
+  }
+
+  const { text, subtext, buttonText } = infoScreenData;
 
   const handleInfoScreenButtonClick = () => {
     router.push(`/survey/${params.surveyId}/${searchParams.nextQuestionId}`);

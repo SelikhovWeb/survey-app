@@ -7,10 +7,10 @@ import { setBackButtonVisibility } from "@/redux/slices/layoutSlice";
 import { resetSurvey } from "@/redux/slices/surveySlice";
 import { redirect } from "next/navigation";
 import { RootState } from "@/redux/store";
-import { Answer, Question } from "@/types";
+import { Answer, QuestionWithAnswers } from "@/types";
 
 interface AnswerOptionProps {
-  question: Question;
+  question: QuestionWithAnswers;
   surveyId: string;
   questionIndex: number;
 }
