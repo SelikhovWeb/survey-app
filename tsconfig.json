@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["css-modules"],
+    "types": ["css-modules", "jest"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
