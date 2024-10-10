@@ -9,6 +9,7 @@ export interface Question {
   text: string;
   answers: Answer[];
   infoScreen?: InfoScreen;
+  parseOptions?: ParseOptions;
 }
 
 export interface Survey {
@@ -29,4 +30,11 @@ export interface InfoScreen {
   text: string;
   subtext: string;
   buttonText: string;
+}
+
+export interface ParseOptions {
+  [key: string]: {
+    questionId: string;
+    answers: { [key: string]: string | undefined };
+  };
 }

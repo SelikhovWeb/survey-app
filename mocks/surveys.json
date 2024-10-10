@@ -54,9 +54,8 @@
         },
         {
           "questionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
-          "shouldParseTexxt": true,
-          "text": "Single {{gender}} {{children}} need a slightly different approach to improve their relationship. Which statement best describes you?",
-          "data": {
+          "text": "Single {{gender}} {{has_kids}} need a slightly different approach to improve their relationship. Which statement best describes you?",
+          "parseOptions": {
             "gender": {
               "questionId": "64200eba-281e-4faf-b9a0-b5bfa430f61a",
               "answers": {
@@ -64,10 +63,10 @@
                 "62309785-f196-4c87-9130-9a796d9ec59a": "male"
               }
             },
-            "children": {
-              "questionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+            "has_kids": {
+              "questionId": "f0f4a4d5-0d8e-4938-92a8-4ae121ecc1f0",
               "answers": {
-                "037b15ac-08ed-4595-9f38-1e27191d84d4": "who have children",
+                "037b15ac-08ed-4595-9f38-1e27191d84d4": "who has children",
                 "54a45732-ec8c-41c8-9e16-06b6543c7c3b": ""
               }
             }
@@ -189,7 +188,23 @@
         },
         {
           "questionId": "161821d7-5b23-4c01-9479-82fb4980fc14",
-          "text": "{Gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+          "text": "{{gender}} {{has_kids}} need a slightly different approach to improve their relationship. Which statement best describes you?",
+          "parseOptions": {
+            "gender": {
+              "questionId": "64200eba-281e-4faf-b9a0-b5bfa430f61a",
+              "answers": {
+                "ad6f9e10-53e6-4468-b15a-0baf35056fd3": "Female",
+                "62309785-f196-4c87-9130-9a796d9ec59a": "Male"
+              }
+            },
+            "has_kids": {
+              "questionId": "28a017dd-ebfa-40dd-b1ce-21a21086a5f9",
+              "answers": {
+                "50899f25-5505-4b0f-92a8-6d94efe4a99e": "who has children",
+                "43fda29f-8e51-4da4-9834-dde9bbd871bc": ""
+              }
+            }
+          },
           "answers": [
             {
               "text": "I’m very unhappy with how things are going in my relationship",

@@ -1,6 +1,7 @@
 import surveys from "@/mocks/surveys.json";
 import AnswersList from "./components/AnswersList";
 import InfoScreenContent from "@/components/InfoScreenContent/InfoScreenContent";
+import ParsedQuestionText from "./components/ParsedQuestionText";
 
 export interface QuestionPageProps {
   params: {
@@ -43,7 +44,14 @@ export default function QuestionPage({
 
   return (
     <div>
-      <h1>{question.text}</h1>
+      {question?.parseOptions ? (
+        <ParsedQuestionText
+          text={question.text}
+          parseOptions={question.parseOptions}
+        />
+      ) : (
+        <h1>{question.text}</h1>
+      )}
       <AnswersList
         surveyId={surveyId}
         question={question}
