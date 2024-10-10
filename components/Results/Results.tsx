@@ -2,7 +2,6 @@
 import styles from "./Results.module.css";
 import { RootState } from "@/redux/store";
 import { CompletedAnswer } from "@/types";
-import Link from "next/link";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../Button/Button";
