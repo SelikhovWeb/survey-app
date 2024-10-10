@@ -1,8 +1,8 @@
 "use client";
+import React from "react";
 import Button from "@/components/Button/Button";
 import { Answer, Question } from "@/types";
-import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { addCompletedAnswer } from "@/redux/slices/surveySlice";
 import { RootState } from "@/redux/store";
@@ -12,9 +12,16 @@ interface AnswerOptionProps {
   surveyId: string;
   question: Question;
   answer: Answer;
+  withInfoScreen?: boolean;
 }
 
-const AnswerOption = ({ answer, surveyId, question }: AnswerOptionProps) => {
+const AnswerOption = ({
+  answer,
+  surveyId,
+  question,
+  withInfoScreen,
+}: AnswerOptionProps) => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const { nextQuestionId, answerId } = answer;
   const { questionId } = question;
@@ -39,25 +46,27 @@ const AnswerOption = ({ answer, surveyId, question }: AnswerOptionProps) => {
       })
     );
 
+    // Navigation logic
     if (!nextQuestionId) {
       dispatch(setBackButtonVisibility(false));
+      router.push(`/survey/${surveyId}/completed`);
+    } else {
+      if (withInfoScreen) {
+        router.push(
+          `/survey/${surveyId}/${questionId}?infoScreenId=${question?.infoScreen?.infoScreenId}&nextQuestionId=${nextQuestionId}`
+        );
+      } else {
+        router.push(`/survey/${surveyId}/${nextQuestionId}`);
+      }
     }
   };
 
   return (
-    <Link
-      href={
-        nextQuestionId
-          ? `/survey/${surveyId}/${nextQuestionId}`
-          : `/survey/${surveyId}/completed`
-      }
-    >
-      <Button
-        text={answer.text}
-        onClick={handleAnswerOptionClick}
-        isActive={isAnswerSelected}
-      />
-    </Link>
+    <Button
+      text={answer.text}
+      onClick={handleAnswerOptionClick}
+      isActive={isAnswerSelected}
+    />
   );
 };
 

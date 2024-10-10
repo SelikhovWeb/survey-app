@@ -5,21 +5,33 @@ import Image from "next/image";
 import GoBackButton from "../GoBackButton/GoBackButton";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import useDarkTheme from "@/hooks/useDarkTheme";
+import classNames from "classnames";
 
 const Header = () => {
+  const isDarkThemeEnabled = useDarkTheme();
+
   const shouldDisplayBackButtonInHeader = useSelector(
     (state: RootState) => state.layout.shouldDisplayBackButtonInHeader
   );
 
+  const logoSrc = isDarkThemeEnabled
+    ? "/light/logo_white.svg"
+    : "/dark/logo_black.svg";
+
   return (
-    <div className={styles.header}>
+    <div
+      className={classNames(styles.header, {
+        [styles.darkTheme]: isDarkThemeEnabled,
+      })}
+    >
       {shouldDisplayBackButtonInHeader && (
         <div className={styles.goBackButtonWrapper}>
-          <GoBackButton />
+          <GoBackButton isDarkThemeEnabled={isDarkThemeEnabled} />
         </div>
       )}
 
-      <Image src="/logo_black.svg" alt="Logo" width={24} height={24} />
+      <Image src={logoSrc} alt="Logo" width={24} height={24} />
     </div>
   );
 };

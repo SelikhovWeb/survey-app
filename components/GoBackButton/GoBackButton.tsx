@@ -2,14 +2,21 @@
 import Image from "next/image";
 import React from "react";
 
-const GoBackButton = () => {
+interface GoBackButtonProps {
+  isDarkThemeEnabled: boolean;
+}
+
+const GoBackButton = ({ isDarkThemeEnabled }: GoBackButtonProps) => {
+  const backIconSrc = isDarkThemeEnabled
+    ? "/light/back_icon_white.svg"
+    : "/dark/back_icon_black.svg";
   const handleGoBack = () => {
     window.history.back();
   };
 
   return (
     <Image
-      src="/back_icon.svg"
+      src={backIconSrc}
       alt="Go back"
       width={24}
       height={24}

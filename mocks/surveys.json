@@ -1,6 +1,393 @@
 {
   "data": [
     {
+      "surveyId": "00613883-5aca-42ab-8f5d-e0d4906145eb",
+      "surveyTitle": "OBRIO SURVEY",
+      "questions": [
+        {
+          "questionId": "64200eba-281e-4faf-b9a0-b5bfa430f61a",
+          "text": "Select your gender:",
+          "answers": [
+            {
+              "text": "Female",
+              "nextQuestionId": "8903d5a9-7cf4-48ce-a88b-b094bcf9ef63",
+              "answerId": "ad6f9e10-53e6-4468-b15a-0baf35056fd3"
+            },
+            {
+              "text": "Male",
+              "nextQuestionId": "8903d5a9-7cf4-48ce-a88b-b094bcf9ef63",
+              "answerId": "62309785-f196-4c87-9130-9a796d9ec59a"
+            }
+          ]
+        },
+        {
+          "questionId": "8903d5a9-7cf4-48ce-a88b-b094bcf9ef63",
+          "text": "So we can get to know you better, tell us about your relationship status.",
+          "answers": [
+            {
+              "text": "Single",
+              "nextQuestionId": "f0f4a4d5-0d8e-4938-92a8-4ae121ecc1f0",
+              "answerId": "386ec050-72da-4512-8404-044b5e72fee6"
+            },
+            {
+              "text": "In a relationship",
+              "nextQuestionId": "28a017dd-ebfa-40dd-b1ce-21a21086a5f9",
+              "answerId": "8c04b62b-7a51-4cb9-96ea-5b35a215c7c0"
+            }
+          ]
+        },
+        {
+          "questionId": "f0f4a4d5-0d8e-4938-92a8-4ae121ecc1f0",
+          "text": "Are you a single parent?",
+          "answers": [
+            {
+              "text": "Yes",
+              "nextQuestionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+              "answerId": "037b15ac-08ed-4595-9f38-1e27191d84d4"
+            },
+            {
+              "text": "No",
+              "nextQuestionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+              "answerId": "54a45732-ec8c-41c8-9e16-06b6543c7c3b"
+            }
+          ]
+        },
+        {
+          "questionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+          "shouldParseTexxt": true,
+          "text": "Single {{gender}} {{children}} need a slightly different approach to improve their relationship. Which statement best describes you?",
+          "data": {
+            "gender": {
+              "questionId": "64200eba-281e-4faf-b9a0-b5bfa430f61a",
+              "answers": {
+                "ad6f9e10-53e6-4468-b15a-0baf35056fd3": "female",
+                "62309785-f196-4c87-9130-9a796d9ec59a": "male"
+              }
+            },
+            "children": {
+              "questionId": "46dbe402-e0d9-4523-940d-b73f4f5490da",
+              "answers": {
+                "037b15ac-08ed-4595-9f38-1e27191d84d4": "who have children",
+                "54a45732-ec8c-41c8-9e16-06b6543c7c3b": ""
+              }
+            }
+          },
+          "answers": [
+            {
+              "text": "I was unhappy with low things were going in my relationship",
+              "nextQuestionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+              "answerId": "1111afd0-4a36-46e9-a078-3d68e38114c9"
+            },
+            {
+              "text": "I was unhappy with parts of my relationship, but some thing were working",
+              "nextQuestionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+              "answerId": "d30d226a-a8bc-4544-9acb-adf3d925b720"
+            },
+            {
+              "text": "I was generally happy with my relationship",
+              "nextQuestionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+              "answerId": "3464e218-7396-4830-81c7-1f6146d8f977"
+            },
+            {
+              "text": "I’ve never been in a relationship",
+              "nextQuestionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+              "answerId": "5c6171b7-de68-41b1-8f97-287d98bef41f"
+            }
+          ]
+        },
+        {
+          "questionId": "43e02eea-3067-4adf-9fca-ae8a9f73b34d",
+          "text": "Do you tend to overthink?",
+          "infoScreen": {
+            "infoScreenId": "782ca52c-7dc1-44de-9cbc-12f4f96c1b9e",
+            "text": "So how does it work?",
+            "subtext": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
+            "buttonText": "Next"
+          },
+          "answers": [
+            {
+              "text": "Yes",
+              "nextQuestionId": "c22fe3f6-5606-44f9-a887-0230b6cd26c0",
+              "infoPageId": "782ca52c-7dc1-44de-9cbc-12f4f96c1b9e",
+              "answerId": "b853eff6-d502-4514-8d5a-f09bf3c1d0d6"
+            },
+            {
+              "text": "No",
+              "nextQuestionId": "99fabaf4-11c3-4eda-b84b-6380e0b6d984",
+              "infoPageId": "782ca52c-7dc1-44de-9cbc-12f4f96c1b9e",
+              "answerId": "aa2664f0-2400-462d-9df1-d70da73d4776"
+            }
+          ]
+        },
+        {
+          "questionId": "c22fe3f6-5606-44f9-a887-0230b6cd26c0",
+          "text": "What is most important to you?",
+          "answers": [
+            {
+              "text": "Success",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "2eb66f95-2852-4e01-9653-6186ae644c31"
+            },
+            {
+              "text": "Romance",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "ab48e505-d248-4f4b-b036-854923b6b09b"
+            },
+            {
+              "text": "Stability",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "90a9a2dd-03a3-4a3d-b210-63a2562173be"
+            },
+            {
+              "text": "Freedom",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "1e326a72-492e-415b-b31b-930d1677ae85"
+            }
+          ]
+        },
+        {
+          "questionId": "99fabaf4-11c3-4eda-b84b-6380e0b6d984",
+          "text": "Is emotional control tricky for you?",
+          "answers": [
+            {
+              "text": "Yes",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "93c542bc-c5db-436c-8939-9efb696ff7fa"
+            },
+            {
+              "text": "Sometimes",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "fa71dcf0-abe9-47d9-ac7a-433741b541f4"
+            },
+            {
+              "text": "Rarely",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "4f8694e8-a92e-477a-9301-66cd055e75fb"
+            },
+            {
+              "text": "Not at all",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "b5bbcfd0-08d7-4217-bf4b-f28636c81d9c"
+            }
+          ]
+        },
+        {
+          "questionId": "28a017dd-ebfa-40dd-b1ce-21a21086a5f9",
+          "text": "Are you a parent?",
+          "answers": [
+            {
+              "text": "Yes",
+              "nextQuestionId": "161821d7-5b23-4c01-9479-82fb4980fc14",
+              "answerId": "50899f25-5505-4b0f-92a8-6d94efe4a99e"
+            },
+            {
+              "text": "No",
+              "nextQuestionId": "161821d7-5b23-4c01-9479-82fb4980fc14",
+              "answerId": "43fda29f-8e51-4da4-9834-dde9bbd871bc"
+            }
+          ]
+        },
+        {
+          "questionId": "161821d7-5b23-4c01-9479-82fb4980fc14",
+          "text": "{Gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+          "answers": [
+            {
+              "text": "I’m very unhappy with how things are going in my relationship",
+              "nextQuestionId": "a3a361b1-d3f5-46f3-8b6a-7dd9b9085786",
+              "answerId": "c0e7e60b-df79-4574-8fb4-9e8fa628fe7e"
+            },
+            {
+              "text": "I’m unhappy with parts of my relationship, but some things are working well",
+              "nextQuestionId": "a3a361b1-d3f5-46f3-8b6a-7dd9b9085786",
+              "answerId": "8a35ff19-0b92-4246-a6f4-bbc139567459"
+            },
+            {
+              "text": "I’m generally happy in my relationship",
+              "nextQuestionId": "a3a361b1-d3f5-46f3-8b6a-7dd9b9085786",
+              "answerId": "952147ca-14f9-4710-a4b1-b2a2d006a5dc"
+            }
+          ]
+        },
+        {
+          "questionId": "a3a361b1-d3f5-46f3-8b6a-7dd9b9085786",
+          "text": "Is your partner an introvert or extrovert?",
+          "answers": [
+            {
+              "text": "Introvert",
+              "nextQuestionId": "c6086465-9f97-41f0-b9a0-39dc186707ba",
+              "answerId": "cacf0097-0666-43fb-850a-0ae7bad0aed7"
+            },
+            {
+              "text": "Extrovert",
+              "nextQuestionId": "c6086465-9f97-41f0-b9a0-39dc186707ba",
+              "answerId": "ce058e92-d174-42ea-bbc0-602710585158"
+            },
+            {
+              "text": "A bit of both",
+              "nextQuestionId": "c6086465-9f97-41f0-b9a0-39dc186707ba",
+              "answerId": "c2bab743-ab96-4b2c-b350-ee0d9312cbbc"
+            }
+          ]
+        },
+        {
+          "questionId": "c6086465-9f97-41f0-b9a0-39dc186707ba",
+          "text": "What is your partner’s gender?",
+          "answers": [
+            {
+              "text": "Male",
+              "nextQuestionId": "f38bb460-bb70-4d95-bd06-181116b34661",
+              "answerId": "1787a0e2-ce9d-4e70-8f37-7cee65c1fef3"
+            },
+            {
+              "text": "Female",
+              "nextQuestionId": "f38bb460-bb70-4d95-bd06-181116b34661",
+              "answerId": "a2d2e6f3-544b-4b97-bfaa-8cbfb217bbc5"
+            }
+          ]
+        },
+        {
+          "questionId": "f38bb460-bb70-4d95-bd06-181116b34661",
+          "text": "Do you agree with the statement below?",
+          "subtext": "“My partner and I make sex a priority in our relationship”",
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "nextQuestionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+              "answerId": "d73c315c-3307-4dfc-952b-c08f62d09bd0"
+            },
+            {
+              "text": "Agree",
+              "nextQuestionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+              "answerId": "9fdefabd-b048-461b-b410-dc5f5a82a417"
+            },
+            {
+              "text": "Neutral",
+              "nextQuestionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+              "answerId": "ab9c4ac5-bd28-4403-a055-49430ce5dab6"
+            },
+            {
+              "text": "Disagree",
+              "nextQuestionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+              "answerId": "e3c72efb-e679-4961-91ee-1777bf45d723"
+            },
+            {
+              "text": "Strongly disagree",
+              "nextQuestionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+              "answerId": "91a5b3f7-d12f-400b-a47f-fadd31607acb"
+            }
+          ]
+        },
+        {
+          "questionId": "e3489d07-3671-4440-bd5b-2394c955b247",
+          "text": "When you think about your relationship goals, you feel...?",
+          "answers": [
+            {
+              "text": "Optimistic! They are totally doable, with some guidance.",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "201296eb-4045-410c-ac7a-1cbec6d93a7a"
+            },
+            {
+              "text": "Cautious. I’ve struggled before, but I’m hopeful.",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "9419d16a-96f5-4ba5-97f1-7ca606b12384"
+            },
+            {
+              "text": "I’m feeling a little anxious, honestly.",
+              "nextQuestionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+              "answerId": "f4872c37-c006-43c5-82ad-1879a8976881"
+            }
+          ]
+        },
+        {
+          "questionId": "a08765d2-5713-40c6-86cb-10f38b0a7ae0",
+          "text": "Where did you hear about us?",
+          "answers": [
+            {
+              "text": "Poster or Billboard",
+              "nextQuestionId": null,
+              "answerId": "6d037b54-fff9-47f1-834f-9d031f727ca2"
+            },
+            {
+              "text": "Friend or Family",
+              "nextQuestionId": null,
+              "answerId": "e8d788a4-1354-4668-aeb8-1e4c53e77328"
+            },
+            {
+              "text": "Instagram",
+              "nextQuestionId": null,
+              "answerId": "927b11a8-99c0-4d08-871c-e86002b7bf0b"
+            },
+            {
+              "text": "Direct Mail or Package Insert",
+              "nextQuestionId": null,
+              "answerId": "2b1cd41b-ea77-41fc-a227-60c0b1e1df7e"
+            },
+            {
+              "text": "Online TV or Streaming TV",
+              "nextQuestionId": null,
+              "answerId": "a02e34cb-b6cd-46ea-902b-022dfbce6d62"
+            },
+            {
+              "text": "TV",
+              "nextQuestionId": null,
+              "answerId": "0881632d-034f-4315-b267-43756d51f0ec"
+            },
+            {
+              "text": "Radio",
+              "nextQuestionId": null,
+              "answerId": "a92e8e57-5fe3-4cf0-8088-5e7b8c15f662"
+            },
+            {
+              "text": "Search Engine (Google, Bing, etc.)",
+              "nextQuestionId": null,
+              "answerId": "441c0c40-f0ee-4bba-8353-a1ea8d8b6204"
+            },
+            {
+              "text": "Newspaper or Magazine",
+              "nextQuestionId": null,
+              "answerId": "8465b138-46d0-46d7-83c8-3d45e902e536"
+            },
+            {
+              "text": "Facebook",
+              "nextQuestionId": null,
+              "answerId": "91ee32af-df9b-46cd-9174-d34d8bd670ad"
+            },
+            {
+              "text": "Blog Post or Website Review",
+              "nextQuestionId": null,
+              "answerId": "ad39e76d-1ea3-45ed-b635-549dd3e12307"
+            },
+            {
+              "text": "Podcast",
+              "nextQuestionId": null,
+              "answerId": "ebfd0b0e-0b3a-4009-91ea-749098bdfe68"
+            },
+            {
+              "text": "Influencer",
+              "nextQuestionId": null,
+              "answerId": "cbf634e4-a633-48a4-a208-db0dec365222"
+            },
+            {
+              "text": "Youtube",
+              "nextQuestionId": null,
+              "answerId": "70abafc2-1d15-4c7f-9acd-48d94126ca05"
+            },
+            {
+              "text": "Pinterest",
+              "nextQuestionId": null,
+              "answerId": "f244389f-2566-438b-a387-684c4e99701d"
+            },
+            {
+              "text": "Other",
+              "nextQuestionId": null,
+              "answerId": "a2c191a0-60e7-46bf-84a3-e513f8938adc"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
       "surveyId": "b9d459c8-9984-4a37-82ca-d26f8451dc4b",
       "surveyTitle": "Color Survey",
       "questions": [

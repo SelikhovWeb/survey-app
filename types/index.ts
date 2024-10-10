@@ -8,6 +8,7 @@ export interface Question {
   questionId: string;
   text: string;
   answers: Answer[];
+  infoScreen?: InfoScreen;
 }
 
 export interface Survey {
@@ -21,4 +22,11 @@ export interface CompletedAnswer {
   question: string;
   answerId: string;
   answer: string;
+}
+
+export interface InfoScreen {
+  infoScreenId: string;
+  text: string;
+  subtext: string;
+  buttonText: string;
 }

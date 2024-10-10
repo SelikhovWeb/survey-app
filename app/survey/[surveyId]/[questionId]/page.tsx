@@ -1,14 +1,21 @@
 import surveys from "@/mocks/surveys.json";
 import AnswersList from "./components/AnswersList";
+import InfoScreenContent from "@/components/InfoScreenContent/InfoScreenContent";
 
-interface QuestionPageProps {
+export interface QuestionPageProps {
   params: {
     surveyId: string;
     questionId: string;
   };
+  searchParams: {
+    [key: string]: string | string[] | undefined;
+  };
 }
 
-export default function QuestionPage({ params }: QuestionPageProps) {
+export default function QuestionPage({
+  params,
+  searchParams,
+}: QuestionPageProps) {
   const { surveyId, questionId } = params;
 
   const survey = surveys.data.find((s) => s.surveyId === surveyId);
@@ -20,6 +27,19 @@ export default function QuestionPage({ params }: QuestionPageProps) {
   const questionIndex = survey.questions.findIndex(
     (q) => q.questionId === questionId
   );
+
+  const shouldShowInfoScreen =
+    !!searchParams?.infoScreenId && question?.infoScreen;
+
+  if (shouldShowInfoScreen) {
+    return (
+      <InfoScreenContent
+        infoScreenData={question.infoScreen}
+        params={params}
+        searchParams={searchParams}
+      />
+    );
+  }
 
   return (
     <div>

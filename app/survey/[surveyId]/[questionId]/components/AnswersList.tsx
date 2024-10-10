@@ -26,6 +26,8 @@ const AnswersList = ({
     (state: RootState) => state.survey.currentSurveyId
   );
 
+  const withInfoScreen = !!question?.infoScreen?.infoScreenId;
+
   useEffect(() => {
     if (questionIndex === 0) {
       dispatch(setBackButtonVisibility(false));
@@ -51,6 +53,7 @@ const AnswersList = ({
             surveyId={surveyId}
             answer={answer}
             question={question}
+            withInfoScreen={withInfoScreen}
           />
         </div>
       ))}

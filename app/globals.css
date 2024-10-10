@@ -3,10 +3,22 @@
   --foreground: #171717;
 }
 
+.dark-theme {
+  --background: linear-gradient(
+    165.54deg,
+    #141333 -33.39%,
+    #202261 15.89%,
+    #543c97 55.84%,
+    #6939a2 74.96%
+  );
+  --foreground: #fbfbff;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body {
@@ -41,7 +53,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff0f0;
+  background-color: var(--background);
 }
 
 button {
