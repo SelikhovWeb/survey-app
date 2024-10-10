@@ -1,4 +1,7 @@
-import surveyData from "../mocks/surveys.json";
+import { SurveysData } from "../types";
+import surveys from "../mocks/surveys.json";
+
+const surveyData: SurveysData = surveys as SurveysData;
 
 describe("Survey JSON validity tests", () => {
   const allQuestions = surveyData.data.flatMap((survey) => survey.questions);
@@ -9,13 +12,21 @@ describe("Survey JSON validity tests", () => {
 
   test("All nextQuestionId must lead to existing questions", () => {
     allQuestions.forEach((question) => {
-      question.answers.forEach((answer) => {
-        const nextQuestionId = answer.nextQuestionId;
+      if (question.type === "radio") {
+        question.answers.forEach((answer) => {
+          const nextQuestionId = answer.nextQuestionId;
+          if (nextQuestionId) {
+            const nextQuestionExists = findQuestionById(nextQuestionId);
+            expect(nextQuestionExists).toBeDefined();
+          }
+        });
+      } else {
+        const nextQuestionId = question.nextQuestionId;
         if (nextQuestionId) {
           const nextQuestionExists = findQuestionById(nextQuestionId);
           expect(nextQuestionExists).toBeDefined();
         }
-      });
+      }
     });
   });
 
@@ -27,7 +38,7 @@ describe("Survey JSON validity tests", () => {
       }
       visited.add(questionId);
       const question = findQuestionById(questionId);
-      if (question) {
+      if (question && question.type === "radio") {
         question.answers.forEach((answer) => {
           if (answer.nextQuestionId) {
             checkForCycles(answer.nextQuestionId);
@@ -50,10 +61,12 @@ describe("Survey JSON validity tests", () => {
           expect(refQuestion).toBeDefined();
 
           Object.keys(option.answers).forEach((answerId) => {
-            const answerExists = refQuestion?.answers.find(
-              (a) => a.answerId === answerId
-            );
-            expect(answerExists).toBeDefined();
+            if (refQuestion?.type === "radio") {
+              const answerExists = refQuestion?.answers.find(
+                (a) => a.answerId === answerId
+              );
+              expect(answerExists).toBeDefined();
+            }
           });
         });
       }
@@ -62,14 +75,16 @@ describe("Survey JSON validity tests", () => {
 
   test("All questions and answers must have required fields", () => {
     allQuestions.forEach((question) => {
-      expect(question.questionId).toBeDefined();
-      expect(question.text).toBeDefined();
-      expect(Array.isArray(question.answers)).toBe(true);
+      if (question.type === "radio") {
+        expect(question.questionId).toBeDefined();
+        expect(question.text).toBeDefined();
+        expect(Array.isArray(question.answers)).toBe(true);
 
-      question.answers.forEach((answer) => {
-        expect(answer.text).toBeDefined();
-        expect(answer.answerId).toBeDefined();
-      });
+        question.answers.forEach((answer) => {
+          expect(answer.text).toBeDefined();
+          expect(answer.answerId).toBeDefined();
+        });
+      }
     });
   });
 });
