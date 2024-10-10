@@ -1,0 +1,7 @@
+. "$(dirname "$0")/_/husky.sh"
+
+npx tsc --noEmit
+
+npx next lint
+
+npx jest
