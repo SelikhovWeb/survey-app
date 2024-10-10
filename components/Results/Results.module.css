@@ -1,3 +1,17 @@
 .resultsList {
   margin-bottom: 20px;
+  width: 330px;
+}
+
+.resultsListItem {
+  margin-bottom: 10px;
+}
+
+.questionText {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.answerText {
+  font-weight: bold;
 }

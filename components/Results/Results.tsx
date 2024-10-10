@@ -7,8 +7,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../Button/Button";
 import { resetSurvey, setCurrentSurveyId } from "@/redux/slices/surveySlice";
+import { useRouter } from "next/navigation";
 
 const Results = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
 
   const completedAnswers = useSelector(
@@ -20,6 +22,7 @@ const Results = () => {
   }, [dispatch]);
 
   const handleBackToHomeClick = () => {
+    router.push("/");
     dispatch(resetSurvey());
   };
 
@@ -31,14 +34,14 @@ const Results = () => {
     <>
       <ul className={styles.resultsList}>
         {completedAnswers.map((answer: CompletedAnswer) => (
-          <li key={answer.questionId}>
-            {answer.question}: {answer.answer}
+          <li className={styles.resultsListItem} key={answer.questionId}>
+            <span className={styles.questionText}>{answer.question}</span>
+            <br />
+            <span className={styles.answerText}>{answer.answer}</span>
           </li>
         ))}
       </ul>
-      <Link href="/">
-        <Button text="Back to Home" onClick={handleBackToHomeClick} />
-      </Link>
+      <Button text="Back to Home" onClick={handleBackToHomeClick} />
     </>
   );
 };

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCompletedAnswer } from "@/redux/slices/surveySlice";
 import { RootState } from "@/redux/store";
 import { setBackButtonVisibility } from "@/redux/slices/layoutSlice";
+import parseQuestionText from "@/app/survey/[surveyId]/[questionId]/utils/parseQuestionText";
 
 interface AnswerOptionProps {
   surveyId: string;
@@ -40,7 +41,13 @@ const AnswerOption = ({
     dispatch(
       addCompletedAnswer({
         questionId,
-        question: question.text,
+        question: question?.parseOptions
+          ? parseQuestionText(
+              question.text,
+              question.parseOptions,
+              completedAnswers
+            )
+          : question.text,
         answerId,
         answer: answer.text,
       })
