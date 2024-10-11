@@ -20,14 +20,16 @@ const Results = () => {
     dispatch(setCurrentSurveyId(null));
   }, [dispatch]);
 
+  useEffect(() => {
+    if (completedAnswers.length === 0) {
+      router.push("/");
+    }
+  }, [completedAnswers, router]);
+
   const handleBackToHomeClick = () => {
     router.push("/");
     dispatch(resetSurvey());
   };
-
-  if (completedAnswers.length === 0) {
-    return <div>No results found</div>;
-  }
 
   return (
     <>
