@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <div
       className={classNames(styles.header, {
-        [styles.darkTheme]: isDarkThemeEnabled,
+        [styles.darkThemeHeader]: isDarkThemeEnabled,
       })}
     >
       {shouldDisplayBackButtonInHeader && (

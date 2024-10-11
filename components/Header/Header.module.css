@@ -1,11 +1,15 @@
 .header {
-  background: transparent;
+  background: var(--background);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   height: 64px;
+}
+
+.darkThemeHeader {
+  background: transparent;
 }
 
 .goBackButtonWrapper {
