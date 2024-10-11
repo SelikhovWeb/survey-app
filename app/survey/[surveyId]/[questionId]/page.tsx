@@ -1,9 +1,11 @@
 import surveysData from "@/mocks/surveys.json";
+import styles from "./page.module.css";
 import AnswersList from "./components/AnswersList";
 import InfoScreenContent from "@/components/InfoScreenContent/InfoScreenContent";
 import ParsedQuestionText from "./components/ParsedQuestionText";
 import { SurveysData } from "@/types";
 import TextAnswer from "./components/TextAnswer/TextAnswer";
+import classNames from "classnames";
 
 export interface QuestionPageProps {
   params: {
@@ -38,6 +40,8 @@ export default function QuestionPage({
 
   const shouldParseQuestionText = question?.parseOptions;
 
+  const withSubtext = !!question?.subtext;
+
   if (shouldShowInfoScreen) {
     return (
       <InfoScreenContent
@@ -50,14 +54,22 @@ export default function QuestionPage({
 
   return (
     <div>
-      {shouldParseQuestionText ? (
-        <ParsedQuestionText
-          text={question.text}
-          parseOptions={question.parseOptions}
-        />
-      ) : (
-        <h1>{question.text}</h1>
-      )}
+      <div
+        className={classNames(styles.questionWrapper, {
+          [styles.questionWrapperWithSubtext]: withSubtext,
+        })}
+      >
+        {shouldParseQuestionText ? (
+          <ParsedQuestionText
+            text={question.text}
+            parseOptions={question.parseOptions}
+          />
+        ) : (
+          <h1>{question.text}</h1>
+        )}
+
+        {withSubtext && <p className={styles.subtext}>{question.subtext}</p>}
+      </div>
 
       {question.type === "radio" && (
         <AnswersList

@@ -11,6 +11,7 @@ export interface BaseQuestion {
   text: string;
   infoScreen?: InfoScreen;
   parseOptions?: ParseOptions;
+  subtext?: string;
 }
 
 export interface QuestionWithAnswers extends BaseQuestion {
